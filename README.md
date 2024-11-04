@@ -12,6 +12,16 @@
   - [Son fonctionnemment](#son-fonctionnemment)
   - [Des alternatives ?](#des-alternatives-)
   - [Un gestionnaire de paquets](#un-gestionnaire-de-paquets)
+  - [Comprendre le pakage.json]()
+    - [Un package de base]()
+    - []()
+    - []()
+- [**hello-node**]()
+- [**node-joke**]()
+- [**node-intergirAvecLeSysteme**]()
+- [**node-serveurWeb**]()
+
+
 - [**🏁 Conclusion**](#conclusion)
 - [**🥇 Contribution**](#contribution)
   - [Contribueur](#contribueur)
@@ -61,6 +71,73 @@ Le gestionnaire de paquets principal pour Node.js est **npm** (Node Package Mana
 4. **Dépendances locales et globales** : npm permet d'installer des packages pour un projet spécifique ou globalement pour tout le système, selon les besoins.
 
 Avec npm, Node.js dispose d’un écosystème riche, qui favorise la réutilisation et le partage de code, accélérant ainsi le développement de projets JavaScript.
+## hello-node
+Création du dossier `hello-node` et du fichier `index.js` dans se dossier avec le contenu suivant :
+```JS
+console.log("Hello world !");
+```
+puis entrée la commande suivante dans le terminal une fois dans le dossier :
+```bash
+node index.js
+```
+se qui doit répondre :
+```
+hello world !
+```
+## node-joke
+Création du dossier `hello-joke` et initialisation de `NodeJS` dans se dossier avec le contenu suivant :
+```bash
+node init
+```
+se qui créer un dossier `node_module` un fichier de configuration du nom de `package.json` avec le contenu par default suivante :
+```JS
+{
+  "name": "joke",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "give-me-a-joke": "^0.5.1"
+  }
+}
+```
+puis installer `give-me-a-joke` avec la commande :
+```bash
+npm install give-me-a-joke
+```
+se qui créer d'autre fichier lier au module que l'on vient d'installer.
+nous allons créer un index.js avec le code suivant :
+```JS
+const giveMeAJoke = require('give-me-a-joke');
+
+    giveMeAJoke.getRandomDadJoke(function(joke)
+{
+    console.log(joke);
+});
+```
+puis lancer la commande :
+```bash
+node index.js
+```
+se qui lancera une blague.
+## node-intergirAvecLeSysteme
+Interagir avec le système
+```JS
+
+```
+## node-serveureWeb
+
+
+
+
+
+
+
 ## **🏁 Conclusion**
 ## **🥇 Contribution**
 

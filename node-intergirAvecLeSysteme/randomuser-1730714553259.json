@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Chaitra",
+                "last": "Kulkarni"
+            },
+            "location": {
+                "street": {
+                    "number": 9129,
+                    "name": "Shivajinagar"
+                },
+                "city": "Bhiwandi",
+                "state": "Andaman and Nicobar Islands",
+                "country": "India",
+                "postcode": 92933,
+                "coordinates": {
+                    "latitude": "11.9437",
+                    "longitude": "47.1639"
+                },
+                "timezone": {
+                    "offset": "+8:00",
+                    "description": "Beijing, Perth, Singapore, Hong Kong"
+                }
+            },
+            "email": "chaitra.kulkarni@example.com",
+            "login": {
+                "uuid": "276dee20-e7dc-4ff7-8035-cf2d1b1f853c",
+                "username": "goldenpeacock966",
+                "password": "cicero",
+                "salt": "D1U90BHb",
+                "md5": "ec4d2b4bd3a7a61e5899b4ae83fde28b",
+                "sha1": "af3d63acc144abbf8f951cbb9a69bd00f687ce73",
+                "sha256": "fbe7cdde676092667f819d641c4e8582016d1ed4b13fc37a971224492e19bcc1"
+            },
+            "dob": {
+                "date": "1954-11-30T12:49:10.079Z",
+                "age": 69
+            },
+            "registered": {
+                "date": "2018-10-09T16:58:14.325Z",
+                "age": 6
+            },
+            "phone": "9095317334",
+            "cell": "7406673008",
+            "id": {
+                "name": "UIDAI",
+                "value": "670692878414"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/8.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/8.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/8.jpg"
+            },
+            "nat": "IN"
+        }
+    ],
+    "info": {
+        "seed": "11cd24e999e5b8b7",
+        "results": 1,
+        "page": 1,
+        "version": "1.4"
+    }
+}
