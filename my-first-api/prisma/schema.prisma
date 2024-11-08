@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  id       Int    @id @default(autoincrement())
+  email    String @db.VarChar(100)
+  password String @db.VarChar(50)
+  posts posts[]
+}
+
+model posts {
+  id        Int         @id @default(autoincrement())
+  author    users       @relation(fields: [authorId], references: [id])
+  authorId  Int
+  title     String      @db.VarChar(2000)
+  content   String      @db.VarChar(2000)
+  categorys postsCategorys[]
+}
+
+model categorys {
+  id      Int         @id @default(autoincrement())
+  nom     String      @db.VarChar(100)
+  posts   postsCategorys[]
+}
+
+// Table de liaison pour la relation many-to-many entre posts et categorys
+model postsCategorys {
+  postId     Int
+  categoryId Int
+
+  post posts @relation(fields: [postId], references: [id])
+  category categorys @relation(fields: [categoryId], references: [id])
+
+  @@id([postId, categoryId]) // clé primaire composite pour éviter les doublons
+}
